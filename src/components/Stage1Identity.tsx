@@ -79,10 +79,10 @@ export const Stage1Identity: React.FC<Stage1IdentityProps> = ({
             <span>Modul Pembelajaran Siswa</span>
           </div>
           <h3 className="text-lg sm:text-xl font-black tracking-tight">
-            Pelajari Materi: Mengamalkan Pancasila &amp; Mengajak Teman
+            Pelajari Materi: Bilangan Desimal Kelas VI
           </h3>
           <p className="text-xs sm:text-sm text-blue-100 leading-relaxed">
-            Pahami makna Pancasila sebagai pandangan hidup bangsa (<em>way of life</em>), pengamalan tiap sila dalam keseharian, serta 5 strategi santun dan efektif mengajak teman berbuat kebaikan di sekolah.
+            Pahami nilai tempat (persepuluhan, perseratusan, perseribuan), cara mengubah pecahan biasa &amp; campuran ↔ desimal, serta teknik membandingkan dan mengurutkan bilangan desimal.
           </p>
         </div>
 
@@ -219,7 +219,7 @@ export const Stage1Identity: React.FC<Stage1IdentityProps> = ({
             <div className="space-y-2 text-xs">
               <div className="flex items-center justify-between bg-slate-800/80 p-2.5 rounded-lg border border-slate-700">
                 <span>1. Pilihan Ganda (PG)</span>
-                <span className="font-bold text-blue-300">20 Butir</span>
+                <span className="font-bold text-blue-300">15 Butir</span>
               </div>
               <div className="flex items-center justify-between bg-slate-800/80 p-2.5 rounded-lg border border-slate-700">
                 <span>2. Pilihan Ganda Kompleks (PGK)</span>
@@ -235,7 +235,7 @@ export const Stage1Identity: React.FC<Stage1IdentityProps> = ({
               </div>
               <div className="flex items-center justify-between pt-2 border-t border-slate-800 text-slate-300">
                 <span>Total Butir Soal:</span>
-                <span className="font-extrabold text-white text-sm">35 Soal</span>
+                <span className="font-extrabold text-white text-sm">30 Soal</span>
               </div>
             </div>
 
@@ -250,7 +250,7 @@ export const Stage1Identity: React.FC<Stage1IdentityProps> = ({
               </p>
               <p className="flex items-start gap-1.5">
                 <CheckCircle2 className="w-3.5 h-3.5 text-blue-400 shrink-0 mt-0.5" />
-                <span>Seluruh 35 butir soal wajib dijawab sebelum dikirim.</span>
+                <span>Seluruh 30 butir soal wajib dijawab sebelum dikirim.</span>
               </p>
               <p className="flex items-start gap-1.5">
                 <CheckCircle2 className="w-3.5 h-3.5 text-blue-400 shrink-0 mt-0.5" />
@@ -264,7 +264,7 @@ export const Stage1Identity: React.FC<Stage1IdentityProps> = ({
                 type="button"
                 onClick={() => downloadExamQuestionsPDF(questions || INITIAL_QUESTIONS)}
                 className="w-full py-2.5 px-3 bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white rounded-xl text-xs font-semibold flex items-center justify-center gap-2 border border-slate-700 transition-colors cursor-pointer"
-                title="Unduh Naskah Soal Ujian (35 Soal) dalam format PDF"
+                title="Unduh Naskah Soal Ujian (30 Soal) dalam format PDF"
               >
                 <Download className="w-4 h-4 text-blue-400" />
                 <span>Unduh Naskah Soal Lengkap (PDF)</span>

@@ -1,18 +1,14 @@
 import React, { useState } from 'react';
-import { MATERI_PANCASILA, MateriSection } from '../data/materiPancasila';
+import { MATERI_MATEMATIKA, MateriSection } from '../data/materiMatematika';
 import { downloadMateriPembelajaranPDF } from '../utils/pdfGenerator';
 import {
   X,
   BookOpen,
   Download,
-  Compass,
-  Star,
-  HeartHandshake,
-  TreePine,
-  Users,
-  Wheat,
-  Megaphone,
-  ShieldAlert,
+  Calculator,
+  ArrowRightLeft,
+  Split,
+  BarChart3,
   CheckCircle2,
   Sparkles,
   School,
@@ -32,33 +28,25 @@ export const MateriModal: React.FC<MateriModalProps> = ({
   onStartExam,
 }) => {
   const [activeSectionId, setActiveSectionId] = useState<string>(
-    MATERI_PANCASILA.sections[0].id
+    MATERI_MATEMATIKA.sections[0].id
   );
 
   if (!isOpen) return null;
 
   const activeSection =
-    MATERI_PANCASILA.sections.find((s) => s.id === activeSectionId) ||
-    MATERI_PANCASILA.sections[0];
+    MATERI_MATEMATIKA.sections.find((s) => s.id === activeSectionId) ||
+    MATERI_MATEMATIKA.sections[0];
 
   const getSectionIcon = (iconName: string) => {
     switch (iconName) {
-      case 'Compass':
-        return <Compass className="w-5 h-5 text-blue-600" />;
-      case 'Star':
-        return <Star className="w-5 h-5 text-amber-500 fill-amber-400" />;
-      case 'HeartHandshake':
-        return <HeartHandshake className="w-5 h-5 text-rose-500" />;
-      case 'TreePine':
-        return <TreePine className="w-5 h-5 text-emerald-600" />;
-      case 'Users':
-        return <Users className="w-5 h-5 text-indigo-600" />;
-      case 'Wheat':
-        return <Wheat className="w-5 h-5 text-yellow-600" />;
-      case 'Megaphone':
-        return <Megaphone className="w-5 h-5 text-blue-600" />;
-      case 'ShieldAlert':
-        return <ShieldAlert className="w-5 h-5 text-purple-600" />;
+      case 'Calculator':
+        return <Calculator className="w-5 h-5 text-blue-600" />;
+      case 'ArrowRightLeft':
+        return <ArrowRightLeft className="w-5 h-5 text-emerald-600" />;
+      case 'Split':
+        return <Split className="w-5 h-5 text-purple-600" />;
+      case 'BarChart3':
+        return <BarChart3 className="w-5 h-5 text-amber-500" />;
       default:
         return <BookOpen className="w-5 h-5 text-blue-600" />;
     }
@@ -76,14 +64,14 @@ export const MateriModal: React.FC<MateriModalProps> = ({
             <div>
               <div className="flex items-center gap-2 flex-wrap">
                 <span className="text-[11px] font-bold uppercase tracking-wider text-blue-800 bg-blue-100 px-2 py-0.5 rounded-md">
-                  Modul Pembelajaran Siswa
+                  Modul Belajar Matematika
                 </span>
                 <span className="text-xs text-slate-500 hidden sm:inline">
-                  {MATERI_PANCASILA.targetKelas} • {MATERI_PANCASILA.schoolName}
+                  {MATERI_MATEMATIKA.targetKelas} • {MATERI_MATEMATIKA.schoolName}
                 </span>
               </div>
               <h3 className="text-sm sm:text-base font-extrabold text-slate-900 tracking-tight mt-0.5">
-                {MATERI_PANCASILA.title}
+                {MATERI_MATEMATIKA.title}
               </h3>
             </div>
           </div>
@@ -101,56 +89,59 @@ export const MateriModal: React.FC<MateriModalProps> = ({
             <button
               type="button"
               onClick={onClose}
-              className="p-2 text-slate-400 hover:text-slate-700 hover:bg-slate-200 rounded-xl transition-colors cursor-pointer"
+              className="p-2 text-slate-400 hover:text-slate-600 rounded-xl hover:bg-slate-200/60 transition-colors cursor-pointer"
+              title="Tutup Modal"
             >
               <X className="w-5 h-5" />
             </button>
           </div>
         </div>
 
-        {/* Content Body: Sidebar Nav + Konten Utama */}
+        {/* Konten Utama: 2 Kolom (Sidebar Navigasi Modul & Rincian Konten) */}
         <div className="flex-1 overflow-hidden grid grid-cols-1 md:grid-cols-12 min-h-0">
-          {/* Sisi Kiri: Menu Navigasi Sub-Bab */}
-          <div className="md:col-span-4 lg:col-span-4 border-r border-slate-200 bg-slate-50/50 p-3 sm:p-4 overflow-y-auto space-y-1.5">
-            <div className="px-2 py-1 mb-2">
-              <span className="text-[11px] font-extrabold uppercase tracking-wider text-slate-400 block">
-                Daftar Bab &amp; Topik Materi
+          {/* Kolom Kiri: Menu Bab Materi */}
+          <div className="md:col-span-4 border-r border-slate-200 overflow-y-auto p-3 sm:p-4 space-y-2 bg-slate-50/50">
+            <div className="p-3 bg-blue-50/80 rounded-2xl border border-blue-200/70 mb-3">
+              <span className="text-[11px] font-bold text-blue-900 uppercase tracking-wider block">
+                Topik Bahasan Ujian
               </span>
+              <p className="text-xs text-blue-800/90 mt-1 leading-relaxed">
+                Pelajari 4 pokok materi bilangan desimal berikut untuk mempersiapkan diri menghadapi tes sumatif.
+              </p>
             </div>
 
-            {MATERI_PANCASILA.sections.map((sec, idx) => {
+            {MATERI_MATEMATIKA.sections.map((sec: MateriSection, idx: number) => {
               const isActive = sec.id === activeSectionId;
               return (
                 <button
                   key={sec.id}
                   type="button"
                   onClick={() => setActiveSectionId(sec.id)}
-                  className={`w-full text-left p-3 rounded-2xl transition-all flex items-start gap-3 cursor-pointer ${
+                  className={`w-full text-left p-3 rounded-2xl transition-all flex items-start gap-3 cursor-pointer border ${
                     isActive
-                      ? 'bg-blue-600 text-white shadow-xs font-semibold'
-                      : 'hover:bg-slate-100 text-slate-700 bg-white border border-slate-200/80'
+                      ? 'bg-white border-blue-500 shadow-xs ring-1 ring-blue-500'
+                      : 'border-transparent hover:bg-white/80 hover:border-slate-200 text-slate-700'
                   }`}
                 >
                   <div
-                    className={`w-8 h-8 rounded-xl flex items-center justify-center shrink-0 mt-0.5 ${
-                      isActive ? 'bg-white/20 text-white' : 'bg-slate-100'
+                    className={`w-9 h-9 rounded-xl flex items-center justify-center shrink-0 mt-0.5 ${
+                      isActive ? 'bg-blue-100' : 'bg-slate-100'
                     }`}
                   >
                     {getSectionIcon(sec.iconName)}
                   </div>
-                  <div className="flex-1 min-w-0">
-                    <p
-                      className={`text-xs font-bold leading-snug line-clamp-2 ${
-                        isActive ? 'text-white' : 'text-slate-900'
+                  <div className="min-w-0 flex-1">
+                    <span className="text-[10px] font-bold text-slate-400 block uppercase tracking-wider">
+                      Submateri 0{idx + 1}
+                    </span>
+                    <h4
+                      className={`text-xs sm:text-sm font-bold truncate ${
+                        isActive ? 'text-blue-900' : 'text-slate-800'
                       }`}
                     >
-                      {sec.title}
-                    </p>
-                    <p
-                      className={`text-[11px] line-clamp-1 mt-0.5 ${
-                        isActive ? 'text-blue-100' : 'text-slate-500'
-                      }`}
-                    >
+                      {sec.title.replace(/^\d+\.\s*/, '')}
+                    </h4>
+                    <p className="text-[11px] text-slate-500 truncate mt-0.5">
                       {sec.subtitle}
                     </p>
                   </div>
@@ -159,81 +150,81 @@ export const MateriModal: React.FC<MateriModalProps> = ({
             })}
           </div>
 
-          {/* Sisi Kanan: Konten Utama Sub-Bab Terpilih */}
-          <div className="md:col-span-8 lg:col-span-8 p-5 sm:p-7 overflow-y-auto space-y-6 bg-white">
-            {/* Header Sub-Bab */}
+          {/* Kolom Kanan: Rincian Bab Terpilih */}
+          <div className="md:col-span-8 overflow-y-auto p-5 sm:p-7 space-y-6">
+            {/* Header Bab Aktif */}
             <div className="pb-4 border-b border-slate-100">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-blue-800 text-xs font-bold mb-2">
-                <Sparkles className="w-3.5 h-3.5" />
-                <span>Materi Pokok Pendidikan Pancasila</span>
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-bold mb-2">
+                {getSectionIcon(activeSection.iconName)}
+                <span>{activeSection.subtitle}</span>
               </div>
-              <h2 className="text-lg sm:text-xl font-extrabold text-slate-900 tracking-tight">
+              <h2 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight">
                 {activeSection.title}
               </h2>
-              <p className="text-xs sm:text-sm text-slate-500 mt-1 font-medium">
-                {activeSection.subtitle}
-              </p>
             </div>
 
             {/* Paragraf Penjelasan */}
-            <div className="space-y-3 text-xs sm:text-sm text-slate-700 leading-relaxed font-normal">
-              {activeSection.content.map((p, pIdx) => (
-                <p key={pIdx}>{p}</p>
+            <div className="space-y-3 text-xs sm:text-sm text-slate-700 leading-relaxed">
+              {activeSection.content.map((p, idx) => (
+                <div
+                  key={idx}
+                  className="p-3.5 bg-slate-50/80 rounded-xl border border-slate-200 font-medium text-slate-800 whitespace-pre-line"
+                >
+                  {p}
+                </div>
               ))}
             </div>
 
-            {/* Poin-Poin Kunci (Key Takeaways) */}
-            <div className="p-4 sm:p-5 rounded-2xl bg-slate-50 border border-slate-200">
-              <h4 className="text-xs font-bold uppercase tracking-wider text-slate-800 mb-3 flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-                Poin Penting Pengamalan:
-              </h4>
-              <ul className="space-y-2 text-xs sm:text-sm text-slate-700">
-                {activeSection.keyPoints.map((pt, ptIdx) => (
-                  <li key={ptIdx} className="flex items-start gap-2.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-blue-600 mt-2 shrink-0" />
+            {/* Poin Kunci / Rumus Penting */}
+            <div className="p-4 sm:p-5 rounded-2xl bg-amber-50/70 border border-amber-200 space-y-3">
+              <div className="flex items-center gap-2 text-amber-900 font-extrabold text-xs sm:text-sm uppercase tracking-wider">
+                <Sparkles className="w-4 h-4 text-amber-600" />
+                <span>Poin Kunci &amp; Ringkasan Rumus</span>
+              </div>
+              <ul className="space-y-2 text-xs sm:text-sm text-amber-950 font-medium">
+                {activeSection.keyPoints.map((pt, i) => (
+                  <li key={i} className="flex items-start gap-2.5">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
                     <span>{pt}</span>
                   </li>
                 ))}
               </ul>
             </div>
 
-            {/* Tips Aksi Nyata & Ajakan Teman */}
+            {/* Tips Belajar & Trik Praktis */}
             {activeSection.actionTips && activeSection.actionTips.length > 0 && (
-              <div className="p-4 sm:p-5 rounded-2xl bg-blue-50/70 border border-blue-200">
-                <h4 className="text-xs font-bold uppercase tracking-wider text-blue-900 mb-3 flex items-center gap-2">
-                  <Megaphone className="w-4 h-4 text-blue-700" />
-                  Tips Aksi Nyata &amp; Cara Mengajak Teman:
-                </h4>
-                <div className="space-y-2 text-xs sm:text-sm text-blue-950">
-                  {activeSection.actionTips.map((tip, tIdx) => (
-                    <div
-                      key={tIdx}
-                      className="p-2.5 bg-white/80 rounded-xl border border-blue-100 flex items-start gap-2"
-                    >
-                      <span className="text-blue-600 font-bold shrink-0">👉</span>
-                      <span className="font-medium">{tip}</span>
-                    </div>
-                  ))}
+              <div className="p-4 sm:p-5 rounded-2xl bg-blue-50/70 border border-blue-200 space-y-2.5">
+                <div className="flex items-center gap-2 text-blue-900 font-extrabold text-xs sm:text-sm uppercase tracking-wider">
+                  <HelpCircle className="w-4 h-4 text-blue-600" />
+                  <span>Tips Belajar &amp; Cara Mudah Mengingat</span>
                 </div>
+                <ul className="space-y-1.5 text-xs text-blue-950 font-medium">
+                  {activeSection.actionTips.map((tip, i) => (
+                    <li key={i} className="flex items-start gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-blue-600 shrink-0 mt-1.5" />
+                      <span>{tip}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             )}
           </div>
         </div>
 
         {/* Footer Modal: Tombol Aksi */}
-        <div className="px-5 py-3.5 sm:px-6 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-3 bg-slate-50/80 shrink-0">
-          <div className="text-xs text-slate-500 text-center sm:text-left">
-            Siap untuk menguji pemahaman? Tekan tombol untuk mulai ujian online.
+        <div className="p-4 sm:px-6 border-t border-slate-200 bg-slate-50 flex flex-col sm:flex-row items-center justify-between gap-3 shrink-0">
+          <div className="text-xs text-slate-500 text-center sm:text-left flex items-center gap-2">
+            <School className="w-4 h-4 text-blue-600" />
+            <span>Materi resmi Kelas VI SD Negeri 3 Loloan Timur</span>
           </div>
 
-          <div className="flex items-center gap-2 w-full sm:w-auto">
+          <div className="flex items-center gap-2.5 w-full sm:w-auto">
             <button
               type="button"
               onClick={onClose}
-              className="flex-1 sm:flex-none px-4 py-2.5 text-xs font-bold text-slate-600 hover:bg-slate-200 rounded-xl transition-colors cursor-pointer"
+              className="flex-1 sm:flex-none px-4 py-2.5 text-xs font-semibold text-slate-600 hover:bg-slate-200/70 rounded-xl transition-colors cursor-pointer"
             >
-              Tutup Materi
+              Tutup Modul
             </button>
             {onStartExam && (
               <button
@@ -242,9 +233,9 @@ export const MateriModal: React.FC<MateriModalProps> = ({
                   onClose();
                   onStartExam();
                 }}
-                className="flex-1 sm:flex-none px-5 py-2.5 text-xs font-bold text-white bg-blue-600 hover:bg-blue-700 rounded-xl transition-all shadow-xs flex items-center justify-center gap-1.5 cursor-pointer"
+                className="flex-1 sm:flex-none px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl text-xs sm:text-sm transition-all shadow-xs flex items-center justify-center gap-2 cursor-pointer"
               >
-                <span>Mulai Tes Sumatif</span>
+                <span>Mulai Kerjakan Tes</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
             )}

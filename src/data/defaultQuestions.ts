@@ -2,591 +2,614 @@ import { Question } from '../types';
 
 export const INITIAL_QUESTIONS: Question[] = [
   // =========================================================================
-  // BAGIAN 1: PILIHAN GANDA (20 BUTIR SOAL: NO. 1 - 20)
-  // Tema: Mengamalkan Pancasila sebagai Pandangan Hidup Bangsa & Mengajak Teman
+  // BAGIAN 1: PILIHAN GANDA (15 BUTIR SOAL: NO. 1 - 15)
+  // Bobot: 1 jawaban benar dari 4 opsi (A, B, C, D)
   // =========================================================================
   {
     id: 1,
     type: 'pg',
-    topic: 'Makna Pancasila sebagai Pandangan Hidup',
+    topic: 'Nilai Tempat Bilangan Desimal',
     difficulty: 'Mudah',
-    text: `Pancasila berkedudukan sebagai pandangan hidup bangsa Indonesia (way of life). Hal ini memiliki arti bahwa Pancasila berfungsi sebagai...`,
+    text: `Pada bilangan desimal 45,782 angka yang menempati nilai tempat perseratusan adalah...`,
     options: [
-      { id: 'A', text: 'Petunjuk arah, pedoman moral, dan penuntun tingkah laku dalam kehidupan sehari-hari' },
-      { id: 'B', text: 'Alat untuk memenangkan persaingan perdagangan antarnegara' },
-      { id: 'C', text: 'Hukum yang hanya berlaku bagi para pejabat negara di pemerintahan' },
-      { id: 'D', text: 'Koleksi pajangan naskah bersejarah di museum nasional' },
+      { id: 'A', text: '4' },
+      { id: 'B', text: '7' },
+      { id: 'C', text: '8' },
+      { id: 'D', text: '2' },
     ],
-    correctAnswer: 'A',
-    explanation: `Sebagai pandangan hidup bangsa, nilai-nilai luhur yang terkandung dalam kelima sila Pancasila dijadikan petunjuk arah, kompas moral, dan pedoman tingkah laku sehari-hari oleh seluruh rakyat Indonesia.`,
+    correctAnswer: 'C',
+    explanation: `Pada bilangan 45,782:
+• Angka 4 menempati puluhan (nilai: 40)
+• Angka 5 menempati satuan (nilai: 5)
+• Angka 7 menempati persepuluhan (nilai: 0,7)
+• Angka 8 menempati perseratusan (nilai: 0,08)
+• Angka 2 menempati perseribuan (nilai: 0,002)
+Jadi, angka yang menempati perseratusan adalah 8.`,
   },
   {
     id: 2,
     type: 'pg',
-    topic: 'Pancasila sebagai Filter Budaya Global',
-    difficulty: 'Sedang',
-    text: `Di era kemajuan teknologi informasi, berbagai budaya asing dapat masuk dengan mudah ke Indonesia melalui internet. Sikap yang mencerminkan pengamalan Pancasila sebagai pandangan hidup bangsa dalam menyikapi hal tersebut adalah...`,
+    topic: 'Nilai Angka Bilangan Desimal',
+    difficulty: 'Mudah',
+    text: `Nilai dari angka 6 pada bilangan desimal 13,065 adalah...`,
     options: [
-      { id: 'A', text: 'Menolak semua perkembangan ilmu pengetahuan dan teknologi dari luar negeri' },
-      { id: 'B', text: 'Menyaring budaya asing dengan memilih yang positif serta menolak budaya yang bertentangan dengan Pancasila' },
-      { id: 'C', text: 'Meniru seluruh gaya hidup barat agar terlihat modern dan keren di hadapan teman' },
-      { id: 'D', text: 'Menghapus kebudayaan daerah sendiri karena dianggap kuno dan ketinggalan zaman' },
+      { id: 'A', text: '0,6' },
+      { id: 'B', text: '0,06' },
+      { id: 'C', text: '0,006' },
+      { id: 'D', text: '6' },
     ],
     correctAnswer: 'B',
-    explanation: `Pancasila berfungsi sebagai filter atau penyaring kebudayaan asing. Kita terbuka menerima kemajuan ilmu pengetahuan dan teknologi, tetapi harus tegas menyaring serta menolak pengaruh buruk seperti individualisme dan pergaulan bebas.`,
+    explanation: `Angka 6 berada pada posisi dua angka di belakang tanda koma (tempat perseratusan), sehingga nilainya adalah 6/100 atau 0,06.`,
   },
   {
     id: 3,
     type: 'pg',
-    topic: 'Sila ke-1: Mengajak Teman Menjaga Toleransi',
-    difficulty: 'Mudah',
-    text: `Saat jam istirahat sekolah tiba, Made hendak melaksanakan sembahyang dan Ahmad hendak sholat di mushola. Sikap seorang siswa yang mencerminkan pengamalan Sila Pertama saat mengajak teman adalah...`,
+    topic: 'Bentuk Penguraian Bilangan Desimal',
+    difficulty: 'Sedang',
+    text: `Bentuk penguraian penjumlahan dari bilangan 8,394 berdasarkan nilai tempatnya yang benar adalah...`,
     options: [
-      { id: 'A', text: 'Mengajak teman-teman lain bermain dengan gaduh di dekat tempat ibadah' },
-      { id: 'B', text: 'Mengingatkan teman agar menunaikan ibadahnya tepat waktu dan menjaga suasana tetap tenang' },
-      { id: 'C', text: 'Memaksa teman agar membatalkan ibadahnya demi ikut bermain bola' },
-      { id: 'D', text: 'Mengejek tata cara doa teman yang berbeda agama dengannya' },
+      { id: 'A', text: '8 + 0,3 + 0,09 + 0,004' },
+      { id: 'B', text: '8 + 0,3 + 0,9 + 0,4' },
+      { id: 'C', text: '80 + 3 + 0,9 + 0,04' },
+      { id: 'D', text: '8 + 0,03 + 0,009 + 0,0004' },
     ],
-    correctAnswer: 'B',
-    explanation: `Mengamalkan Sila Pertama (Ketuhanan Yang Maha Esa) diwujudkan dengan mengingatkan dan memberi kesempatan kepada sesama teman untuk beribadah tepat waktu serta menjaga ketenangan suasana ibadahnya.`,
+    correctAnswer: 'A',
+    explanation: `Penguraian nilai tempat bilangan 8,394:
+• 8 sebagai satuan = 8
+• 3 sebagai persepuluhan = 0,3
+• 9 sebagai perseratusan = 0,09
+• 4 sebagai perseribuan = 0,004
+Maka 8,394 = 8 + 0,3 + 0,09 + 0,004.`,
   },
   {
     id: 4,
     type: 'pg',
-    topic: 'Sila ke-1: Mengajak Berdoa Sebelum Belajar',
+    topic: 'Mengubah Pecahan menjadi Desimal',
     difficulty: 'Mudah',
-    text: `Sebelum kegiatan kelompok belajar dimulai di kelas VI, ketua regu mengajak seluruh anggota berdoa sesuai keyakinan masing-masing dengan khusyuk. Tindakan ketua regu tersebut mencerminkan...`,
+    text: `Bentuk desimal dari pecahan 3/4 adalah...`,
     options: [
-      { id: 'A', text: 'Pengamalan Sila Pertama dalam mengawali setiap ikhtiar dengan memohon bimbingan Tuhan' },
-      { id: 'B', text: 'Pemborosan waktu yang memperlambat pengerjaan tugas sekolah' },
-      { id: 'C', text: 'Upaya untuk memamerkan kealiman diri sendiri di depan guru' },
-      { id: 'D', text: 'Paksaan keyakinan yang merugikan anggota kelompok' },
+      { id: 'A', text: '0,34' },
+      { id: 'B', text: '0,43' },
+      { id: 'C', text: '0,75' },
+      { id: 'D', text: '0,25' },
     ],
-    correctAnswer: 'A',
-    explanation: `Mengajak teman berdoa sebelum belajar adalah teladan pengamalan Sila Pertama, di mana setiap usaha dan ilmu pengetahuan disandarkan pada rahmat serta bimbingan Tuhan Yang Maha Esa.`,
+    correctAnswer: 'C',
+    explanation: `Untuk mengubah 3/4 menjadi desimal, ubah penyebut menjadi 100 dengan mengalikan pembilang dan penyebut dengan 25:
+(3 × 25) / (4 × 25) = 75/100 = 0,75.
+Atau membagi bersusun 3 : 4 = 0,75.`,
   },
   {
     id: 5,
     type: 'pg',
-    topic: 'Sila ke-2: Mengajak Teman Melawan Perundungan',
-    difficulty: 'Sedang',
-    text: `Di halaman sekolah, Wayan melihat beberapa teman mengejek kekurangan fisik seorang siswa baru hingga siswa tersebut menangis. Tindakan terpuji yang semestinya dilakukan Wayan adalah...`,
+    topic: 'Mengubah Pecahan menjadi Desimal',
+    difficulty: 'Mudah',
+    text: `Bentuk desimal dari pecahan 7/20 adalah...`,
     options: [
-      { id: 'A', text: 'Ikut menertawakan agar tidak dijauhi oleh teman-teman yang mengejek' },
-      { id: 'B', text: 'Merekam kejadian tersebut dengan ponsel untuk disebarkan di media sosial' },
-      { id: 'C', text: 'Mengingatkan teman secara tegas dan santun untuk menghentikan ejekan, lalu menemani serta menghibur siswa tersebut' },
-      { id: 'D', text: 'Berpura-pura tidak melihat dan langsung pergi meninggalkan tempat kejadian' },
+      { id: 'A', text: '0,70' },
+      { id: 'B', text: '0,35' },
+      { id: 'C', text: '0,27' },
+      { id: 'D', text: '0,14' },
     ],
-    correctAnswer: 'C',
-    explanation: `Sila Kedua menuntut kita membela kemanusiaan, menjunjung hak asasi, dan menghentikan perundungan (bullying). Mengingatkan teman dengan sopan dan melindungi yang lemah adalah bukti nyata insan beradab.`,
+    correctAnswer: 'B',
+    explanation: `Kalikan pembilang dan penyebut dengan 5 agar penyebutnya menjadi 100:
+(7 × 5) / (20 × 5) = 35/100 = 0,35.`,
   },
   {
     id: 6,
     type: 'pg',
-    topic: 'Sila ke-2: Mengajak Teman Berempati & Berdonasi',
-    difficulty: 'Mudah',
-    text: `Rumah salah satu teman sekelas terkena musibah banjir. Siti memiliki inisiatif mengajak teman-teman sekelas mengumpulkan sumbangan sukarela berupa pakaian layak dan alat tulis. Tindakan Siti mencerminkan...`,
+    topic: 'Mengubah Pecahan Campuran menjadi Desimal',
+    difficulty: 'Sedang',
+    text: `Ibu membeli gula pasir seberat 2 3/5 kg di warung. Bentuk desimal dari berat gula pasir tersebut adalah...`,
     options: [
-      { id: 'A', text: 'Pengamalan Sila Kedua melalui sikap empati, kasih sayang, dan tolong-menolong sesama manusia' },
-      { id: 'B', text: 'Tindakan yang merepotkan teman-teman di luar jam pelajaran' },
-      { id: 'C', text: 'Keinginan agar dipuji oleh guru sebagai murid paling dermawan' },
-      { id: 'D', text: 'Upaya mengambil keuntungan pribadi dari musibah teman' },
+      { id: 'A', text: '2,35 kg' },
+      { id: 'B', text: '2,6 kg' },
+      { id: 'C', text: '2,3 kg' },
+      { id: 'D', text: '2,53 kg' },
     ],
-    correctAnswer: 'A',
-    explanation: `Mengajak teman berdonasi menolong korban musibah mencerminkan nilai luhur kemanusiaan yang adil dan beradab, mempererat rasa persaudaraan dan tenggang rasa.`,
+    correctAnswer: 'B',
+    explanation: `Pecahan campuran 2 3/5:
+Ubah 3/5 menjadi desimal: (3 × 2) / (5 × 2) = 6/10 = 0,6.
+Gabungkan dengan bilangan bulat: 2 + 0,6 = 2,6 kg.`,
   },
   {
     id: 7,
     type: 'pg',
-    topic: 'Sila ke-2: Cara Santun Mengingatkan Teman',
+    topic: 'Mengubah Pecahan menjadi Desimal',
     difficulty: 'Sedang',
-    text: `Jika kamu melihat seorang teman memanggil teman lain dengan julukan yang mengejek nama orang tuanya, cara terbaik dan paling santun untuk mengingatkannya adalah...`,
+    text: `Pecahan 5/8 jika diubah ke dalam bentuk bilangan desimal adalah...`,
     options: [
-      { id: 'A', text: 'Membalas mengejeknya di hadapan seluruh siswa saat jam istirahat' },
-      { id: 'B', text: 'Berbicara empat mata secara pribadi dan mengingatkan bahwa memanggil dengan julukan buruk dapat menyakiti hati teman' },
-      { id: 'C', text: 'Mendorong dan memukul teman tersebut agar jera' },
-      { id: 'D', text: 'Memusuhi teman tersebut dan mengajak seluruh kelas untuk mengucilkannya' },
+      { id: 'A', text: '0,58' },
+      { id: 'B', text: '0,625' },
+      { id: 'C', text: '0,85' },
+      { id: 'D', text: '0,375' },
     ],
     correctAnswer: 'B',
-    explanation: `Mengingatkan teman harus dilakukan dengan etika beradab (Sila ke-2), yaitu berbicara secara empat mata tanpa mempermalukan, sehingga teman dapat menerima nasihat dengan hati lapang.`,
+    explanation: `Ubah penyebut 8 menjadi 1.000 dengan mengalikan 125:
+(5 × 125) / (8 × 125) = 625/1.000 = 0,625.
+Atau dengan pembagian bersusun 5 : 8 = 0,625.`,
   },
   {
     id: 8,
     type: 'pg',
-    topic: 'Sila ke-3: Mengajak Teman Menjaga Kerukunan Suku',
+    topic: 'Mengubah Desimal menjadi Pecahan',
     difficulty: 'Mudah',
-    text: `Di kelas VI terdapat siswa dari beragam latar belakang suku bangsa (Bali, Melayu Loloan, Jawa, dan Sasak). Sikap yang mencerminkan ajakan persatuan (Sila ke-3) saat membentuk kelompok belajar adalah...`,
+    text: `Bentuk pecahan biasa paling sederhana dari bilangan desimal 0,6 adalah...`,
     options: [
-      { id: 'A', text: 'Mengajak teman-teman membentuk regu campuran tanpa membeda-bedakan asal suku' },
-      { id: 'B', text: 'Hanya mau berkelompok dengan teman yang satu suku dan satu logat bicara' },
-      { id: 'C', text: 'Menolak berbicara dengan teman yang berasal dari luar daerah' },
-      { id: 'D', text: 'Membuat kelompok eksklusif berdasarkan tingkat kekayaan keluarga' },
+      { id: 'A', text: '6/10' },
+      { id: 'B', text: '3/5' },
+      { id: 'C', text: '2/3' },
+      { id: 'D', text: '1/6' },
     ],
-    correctAnswer: 'A',
-    explanation: `Sila Ketiga mengamanatkan terwujudnya Persatuan Indonesia. Mengajak teman membentuk kelompok inklusif memperkokoh persaudaraan dan semangat Bhinneka Tunggal Ika.`,
+    correctAnswer: 'B',
+    explanation: `0,6 = 6/10.
+Sederhanakan dengan membagi pembilang dan penyebut dengan FPB(6, 10) yaitu 2:
+(6 : 2) / (10 : 2) = 3/5.`,
   },
   {
     id: 9,
     type: 'pg',
-    topic: 'Sila ke-3: Mengajak Teman Mencintai Produk Negeri',
+    topic: 'Mengubah Desimal menjadi Pecahan',
     difficulty: 'Sedang',
-    text: `Budi melihat temannya enggan memakai sepatu buatan perajin lokal karena menganggap produk luar negeri lebih bergengsi. Cara bijak Budi mengajak temannya mencintai produk dalam negeri adalah...`,
+    text: `Bilangan desimal 0,45 jika diubah ke dalam bentuk pecahan biasa yang paling sederhana menjadi...`,
     options: [
-      { id: 'A', text: 'Merusak sepatu temannya agar mau membeli sepatu baru' },
-      { id: 'B', text: 'Menjelaskan dengan ramah bahwa kualitas produk lokal sangat bagus serta membeli produk lokal membantu perekonomian bangsa' },
-      { id: 'C', text: 'Mengejek temannya sebagai orang yang tidak nasionalis di depan umum' },
-      { id: 'D', text: 'Ikut-ikutan membeli produk luar negeri agar dianggap keren' },
+      { id: 'A', text: '9/20' },
+      { id: 'B', text: '45/100' },
+      { id: 'C', text: '4/5' },
+      { id: 'D', text: '9/10' },
     ],
-    correctAnswer: 'B',
-    explanation: `Mengajak teman mencintai produk dalam negeri harus disertai edukasi yang ramah mengenai mutu produk Indonesia dan kontribusinya dalam memajukan kesejahteraan bangsa.`,
+    correctAnswer: 'A',
+    explanation: `0,45 = 45/100.
+Bagi pembilang dan penyebut dengan FPB(45, 100) yaitu 5:
+(45 : 5) / (100 : 5) = 9/20.`,
   },
   {
     id: 10,
     type: 'pg',
-    topic: 'Sila ke-3: Mengajak Gotong Royong Kebersihan',
-    difficulty: 'Mudah',
-    text: `Menjelang penilaian kebersihan sekolah, halaman kelas terlihat kotor oleh daun kering dan sampah plastik. Ajakan yang paling tepat berjiwa gotong royong adalah...`,
+    topic: 'Mengubah Desimal menjadi Pecahan Campuran',
+    difficulty: 'Sedang',
+    text: `Bentuk pecahan campuran paling sederhana dari 3,75 adalah...`,
     options: [
-      { id: 'A', text: '"Biarkan saja, kan nanti ada petugas kebersihan sekolah yang menyapu."' },
-      { id: 'B', text: '"Teman-teman, yuk kita luangkan 10 menit menyapu dan memungut sampah bersama agar kelas kita bersih dan nyaman!"' },
-      { id: 'C', text: '"Hei kamu yang suka buang sampah, bersihkan halaman ini sendirian sampai selesai!"' },
-      { id: 'D', text: '"Siapa yang tidak menyapu hari ini harus membayar denda sepuluh ribu rupiah!"' },
+      { id: 'A', text: '3 7/5' },
+      { id: 'B', text: '3 3/4' },
+      { id: 'C', text: '3 1/4' },
+      { id: 'D', text: '3 75/10' },
     ],
     correctAnswer: 'B',
-    explanation: `Gotong royong adalah inti pengamalan persatuan. Ajakan yang bersahabat dan mengajak turun langsung bekerja sama menumbuhkan kekompakan antarsiswa.`,
+    explanation: `3,75 terdiri dari bilangan bulat 3 dan desimal 0,75.
+0,75 = 75/100 = (75 : 25) / (100 : 25) = 3/4.
+Jadi, bentuk pecahan campurannya adalah 3 3/4.`,
   },
   {
     id: 11,
     type: 'pg',
-    topic: 'Sila ke-4: Mengajak Musyawarah Mufakat',
+    topic: 'Membandingkan Bilangan Desimal',
     difficulty: 'Mudah',
-    text: `Ketika kelas VI hendak memilih tujuan kegiatan jalan santai edukasi, terjadi perbedaan pendapat yang sangat sengit di antara para siswa. Sikap seorang insan Pancasila adalah mengajak teman untuk...`,
+    text: `Tanda perbandingan yang tepat untuk mengisi titik-titik pada: 0,75 ... 0,705 adalah...`,
     options: [
-      { id: 'A', text: 'Duduk bersama dalam musyawarah kelas untuk mencari kesepakatan mufakat yang terbaik bagi semua pihak' },
-      { id: 'B', text: 'Melakukan adu fisik untuk menentukan siapa yang berhak mengambil keputusan' },
-      { id: 'C', text: 'Membatalkan seluruh kegiatan karena malas berdiskusi' },
-      { id: 'D', text: 'Menyerahkan keputusan kepada siswa yang memiliki uang saku paling banyak' },
+      { id: 'A', text: '< (lebih kecil)' },
+      { id: 'B', text: '> (lebih besar)' },
+      { id: 'C', text: '= (sama dengan)' },
+      { id: 'D', text: '≤ (kurang dari sama dengan)' },
     ],
-    correctAnswer: 'A',
-    explanation: `Sila Keempat mengedepankan musyawarah untuk mufakat dalam setiap penyelesaian masalah bersama. Musyawarah menjamin hak setiap orang dihargai secara adil.`,
+    correctAnswer: 'B',
+    explanation: `Samakan jumlah digit di belakang koma:
+0,75 = 0,750
+0,705 = 0,705
+Bandingkan angka perseratusan: pada 0,750 angka perseratusannya adalah 5, sedangkan pada 0,705 angka perseratusannya adalah 0. Karena 5 > 0, maka 0,75 > 0,705.`,
   },
   {
     id: 12,
     type: 'pg',
-    topic: 'Sila ke-4: Etika Menghargai Pendapat Teman',
+    topic: 'Membandingkan Bilangan Desimal',
     difficulty: 'Sedang',
-    text: `Saat Made sedang menyampaikan usulannya dalam rapat musyawarah kelas, Kadek tiba-tiba berteriak memotong pembicaraan Made secara kasar. Sikap yang tepat dilakukan ketua kelas untuk mengajak tertib adalah...`,
+    text: `Perhatikan perbandingan berikut:
+(i) 0,8 > 0,79
+(ii) 1,25 < 1,205
+(iii) 0,350 = 0,35
+(iv) 2,401 > 2,41
+Pernyataan perbandingan yang bernilai BENAR adalah...`,
     options: [
-      { id: 'A', text: 'Mengusir Kadek keluar kelas dan melarangnya mengikuti pelajaran' },
-      { id: 'B', text: 'Mengingatkan Kadek dengan santun agar menunggu giliran berbicara dan mendengarkan usulan Made sampai tuntas' },
-      { id: 'C', text: 'Membiarkan keributan berlanjut sampai ada yang menangis' },
-      { id: 'D', text: 'Ikut membentak Kadek agar suasana semakin ramai' },
+      { id: 'A', text: '(i) dan (ii)' },
+      { id: 'B', text: '(i) dan (iii)' },
+      { id: 'C', text: '(ii) dan (iv)' },
+      { id: 'D', text: '(iii) dan (iv)' },
     ],
     correctAnswer: 'B',
-    explanation: `Dalam musyawarah, setiap orang berhak menyampaikan pandangannya. Mengingatkan teman dengan sopan agar tidak memotong pembicaraan adalah penegakan etika musyawarah berjiwa Pancasila.`,
+    explanation: `Mari kita evaluasi:
+(i) 0,80 > 0,79 (BENAR, karena 80 > 79)
+(ii) 1,250 < 1,205 (SALAH, seharusnya 1,250 > 1,205)
+(iii) 0,350 = 0,35 (BENAR, angka 0 paling kanan setelah koma tidak mengubah nilai)
+(iv) 2,401 > 2,410 (SALAH, seharusnya 2,401 < 2,410)
+Jadi pernyataan yang benar adalah (i) dan (iii).`,
   },
   {
     id: 13,
     type: 'pg',
-    topic: 'Sila ke-4: Mengajak Menerima Hasil Keputusan Bersama',
+    topic: 'Mengurutkan Bilangan Desimal dari Terkecil',
     difficulty: 'Sedang',
-    text: `Hasil voting kelas memutuskan pemilihan ketua kelas dimenangkan oleh Dimas, sedangkan usulan Roni yang menjagokan sahabatnya tidak terpilih. Sikap Roni yang mencerminkan jiwa Pancasila adalah...`,
+    text: `Urutan bilangan desimal: 0,4 ; 0,25 ; 0,375 ; 0,5 dari yang TERKECIL ke terbesar adalah...`,
     options: [
-      { id: 'A', text: 'Menerima hasil keputusan bersama dengan ikhlas dan mengajak teman lain mendukung kepemimpinan Dimas' },
-      { id: 'B', text: 'Menghasut teman-teman agar mogok belajar dan tidak mematuhi instruksi ketua kelas' },
-      { id: 'C', text: 'Memusuhi Dimas dan tidak mau menyapanya lagi di sekolah' },
-      { id: 'D', text: 'Menuntut guru agar membatalkan hasil pemilihan yang sah' },
+      { id: 'A', text: '0,25 ; 0,375 ; 0,4 ; 0,5' },
+      { id: 'B', text: '0,4 ; 0,25 ; 0,5 ; 0,375' },
+      { id: 'C', text: '0,25 ; 0,4 ; 0,375 ; 0,5' },
+      { id: 'D', text: '0,375 ; 0,25 ; 0,4 ; 0,5' },
     ],
     correctAnswer: 'A',
-    explanation: `Menerima kekalahan dan mendukung hasil musyawarah secara ikhlas (legawa) adalah ciri ksatria warga negara yang berpedoman pada Sila Keempat.`,
+    explanation: `Samakan banyaknya digit di belakang koma menjadi 3 digit:
+• 0,4 = 0,400
+• 0,25 = 0,250
+• 0,375 = 0,375
+• 0,5 = 0,500
+Urutan dari terkecil: 0,250 (0,25) ; 0,375 ; 0,400 (0,4) ; 0,500 (0,5).
+Maka urutannya: 0,25 ; 0,375 ; 0,4 ; 0,5.`,
   },
   {
     id: 14,
     type: 'pg',
-    topic: 'Sila ke-5: Mengajak Hidup Hemat & Menabung',
-    difficulty: 'Mudah',
-    text: `Putu selalu menghabiskan uang sakunya untuk membeli mainan yang tidak bermanfaat. Ani ingin mengajak Putu mengamalkan nilai Sila Kelima. Kalimat ajakan Ani yang paling tepat adalah...`,
+    topic: 'Mengurutkan Bilangan Desimal dari Terbesar',
+    difficulty: 'Sedang',
+    text: `Empat orang siswa kelas VI SD Negeri 3 Loloan Timur mencatat waktu lari cepat 60 meter sebagai berikut:
+• Putu: 9,45 detik
+• Kadek: 9,08 detik
+• Komang: 9,8 detik
+• Ketut: 9,25 detik
+Urutan siswa dengan catatan waktu dari yang PALING CEPAT (waktu tersingkat/terkecil) adalah...`,
     options: [
-      { id: 'A', text: '"Putu, kamu pelit sekali kalau tidak mentraktir semua teman di kelas!"' },
-      { id: 'B', text: '"Putu, yuk kita sisihkan sebagian uang jajan untuk ditabung di celengan, supaya bisa kita pakai saat ada kebutuhan mendesak."' },
-      { id: 'C', text: '"Uangmu terlalu banyak, lebih baik berikan saja semuanya kepadaku."' },
-      { id: 'D', text: '"Jangan jajan sama sekali seumur hidup agar kamu cepat kaya."' },
+      { id: 'A', text: 'Komang, Putu, Ketut, Kadek' },
+      { id: 'B', text: 'Kadek, Ketut, Putu, Komang' },
+      { id: 'C', text: 'Kadek, Putu, Ketut, Komang' },
+      { id: 'D', text: 'Ketut, Kadek, Putu, Komang' },
     ],
     correctAnswer: 'B',
-    explanation: `Gemar menabung dan menjauhi perilaku boros adalah butir pengamalan Sila Kelima. Mengajak teman menabung secara persuasif membantu mereka melatih disiplin finansial.`,
+    explanation: `Paling cepat berarti memiliki waktu tempuh paling kecil:
+Samakan angka di belakang koma:
+• Kadek = 9,08 detik
+• Ketut = 9,25 detik
+• Putu = 9,45 detik
+• Komang = 9,80 detik
+Urutan waktu dari terkecil: Kadek (9,08) < Ketut (9,25) < Putu (9,45) < Komang (9,80).
+Jadi urutan siswa tercepat adalah Kadek, Ketut, Putu, Komang.`,
   },
   {
     id: 15,
     type: 'pg',
-    topic: 'Sila ke-5: Mengajak Menghargai Karya Teman',
-    difficulty: 'Mudah',
-    text: `Di sudut mading kelas, terpajang karya puisi buatan Lani yang ditulis dengan sederhana namun penuh ketulusan. Tindakan yang mencerminkan Sila Kelima adalah...`,
-    options: [
-      { id: 'A', text: 'Mencoret-coret puisi Lani karena merasa tulisan sendiri jauh lebih indah' },
-      { id: 'B', text: 'Membaca puisi tersebut, memberikan pujian tulus, dan mengajak teman lain mengapresiasi karya Lani' },
-      { id: 'C', text: 'Merobek kertas puisi tersebut saat tidak ada orang yang melihat' },
-      { id: 'D', text: 'Mengejek gaya bahasa Lani di hadapan teman-teman lainnya' },
-    ],
-    correctAnswer: 'B',
-    explanation: `Sila Kelima mengajarkan kita untuk suka menghargai hasil karya orang lain. Memberikan apresiasi positif menumbuhkan rasa percaya diri dan iklim belajar yang saling mendukung.`,
-  },
-  {
-    id: 16,
-    type: 'pg',
-    topic: 'Sila ke-5: Keseimbangan Hak dan Kewajiban',
-    difficulty: 'Sedang',
-    text: `Saat jam istirahat, Reza ingin langsung bermain bola, padahal hari itu adalah jadwal gilirannya melaksanakan tugas piket kebersihan kelas. Ajakan yang tepat dari regu piket adalah...`,
-    options: [
-      { id: 'A', text: '"Reza, yuk kita bersihkan ruang kelas bersama-sama dulu, setelah selesai kita bisa bermain bola dengan nyaman!"' },
-      { id: 'B', text: '"Pergi saja bermain bola, kami tidak butuh bantuanmu sama sekali!"' },
-      { id: 'C', text: '"Kamu harus bayar denda kepada kami kalau mau pergi bermain bola."' },
-      { id: 'D', text: '"Biarkan kelas kotor saja, kita semua ikut Reza bermain bola."' },
-    ],
-    correctAnswer: 'A',
-    explanation: `Menjaga keseimbangan antara hak dan kewajiban merupakan inti keadilan sosial. Mengajak teman menuntaskan kewajiban terlebih dahulu mengajarkan kedisiplinan dan tanggung jawab moral.`,
-  },
-  {
-    id: 17,
-    type: 'pg',
-    topic: 'Prinsip Keteladanan: Ing Ngarso Sung Tulodo',
-    difficulty: 'Sedang',
-    text: `Pepatah Ki Hajar Dewantara berbunyi "Ing Ngarso Sung Tulodo", yang artinya di depan memberi teladan. Hubungan prinsip ini dengan upaya mengajak teman mengamalkan Pancasila adalah...`,
-    options: [
-      { id: 'A', text: 'Kita harus menuntut orang lain berbuat baik sebelum kita sendiri melakukannya' },
-      { id: 'B', text: 'Tindakan nyata dan teladan perilaku kita sendiri jauh lebih berpengaruh daripada hanya sekadar kata-kata nasihat' },
-      { id: 'C', text: 'Kita hanya perlu memberi perintah tanpa perlu ikut bekerja bersama teman' },
-      { id: 'D', text: 'Menjadi pemimpin berarti bebas dari kewajiban mematuhi aturan sekolah' },
-    ],
-    correctAnswer: 'B',
-    explanation: `Keteladanan nyata adalah metode paling efektif dalam mengajak orang lain. Ketika teman melihat kejujuran, kedisiplinan, dan keramahan kita, mereka akan terinspirasi untuk menirunya.`,
-  },
-  {
-    id: 18,
-    type: 'pg',
-    topic: 'Strategi Nasihat Empat Mata Tanpa Menggurui',
+    topic: 'Penerapan Konversi & Perbandingan Desimal',
     difficulty: 'Sukar',
-    text: `Mengapa menasihati teman yang berbuat salah sebaiknya dilakukan secara pribadi (empat mata) dan bukan di depan teman-teman lain?`,
+    text: `Tiga orang anak memiliki pita dengan panjang berbeda:
+• Made memiliki pita sepanjang 0,7 meter
+• Siti memiliki pita sepanjang 3/5 meter
+• Dayu memiliki pita sepanjang 0,65 meter
+Pita milik siapakah yang PALING PANJANG?`,
     options: [
-      { id: 'A', text: 'Agar teman tidak merasa dipermalukan atau tersinggung harga dirinya, sehingga lebih mudah menerima kebenaran' },
-      { id: 'B', text: 'Agar kita dapat meminta imbalan uang dari teman tersebut' },
-      { id: 'C', text: 'Agar guru tidak mengetahui bahwa kita adalah murid yang rajin menasihati' },
-      { id: 'D', text: 'Karena aturan hukum melarang berbicara di depan lebih dari dua orang' },
+      { id: 'A', text: 'Pita milik Made' },
+      { id: 'B', text: 'Pita milik Siti' },
+      { id: 'C', text: 'Pita milik Dayu' },
+      { id: 'D', text: 'Semua pita sama panjang' },
     ],
     correctAnswer: 'A',
-    explanation: `Menasihati di depan umum sering membuat orang merasa tersudut dan defensif. Nasihat empat mata dengan bahasa yang hangat menjaga martabat teman (Sila ke-2) dan membuka hatinya untuk berubah lebih baik.`,
-  },
-  {
-    id: 19,
-    type: 'pg',
-    topic: 'Media Kampanye Positif Pancasila di Sekolah',
-    difficulty: 'Mudah',
-    text: `Untuk mengajak seluruh warga sekolah menerapkan nilai Pancasila, kelompok siswa kelas VI membuat poster bertuliskan "Stop Bullying, Rukun Itu Indah, Kita Semua Bersaudara". Manfaat dari kegiatan ini adalah...`,
-    options: [
-      { id: 'A', text: 'Menghabiskan kertas gambar dan cat warna sekolah' },
-      { id: 'B', text: 'Menyebarkan pesan positif dan mengingatkan warga sekolah agar saling menyayangi antarsesama' },
-      { id: 'C', text: 'Mencari sensasi agar terkenal di media sosial' },
-      { id: 'D', text: 'Mengotori dinding sekolah dengan tulisan yang tidak perlu' },
-    ],
-    correctAnswer: 'B',
-    explanation: `Membuat media kampanye edukatif seperti poster dan slogan di mading sekolah merupakan sarana efektif dan kreatif untuk mengajak seluruh komunitas sekolah mengamalkan nilai-nilai Pancasila.`,
-  },
-  {
-    id: 20,
-    type: 'pg',
-    topic: 'Siswa sebagai Pelopor Perubahan (Agent of Change)',
-    difficulty: 'Sedang',
-    text: `Sebagai siswa kelas VI di SD Negeri 3 Loloan Timur, peran nyata yang dapat kamu lakukan untuk mewujudkan Pancasila sebagai pandangan hidup bangsa adalah...`,
-    options: [
-      { id: 'A', text: 'Menjadi pelopor kebaikan, konsisten berbuat jujur, dan aktif mengajak teman menjaga kerukunan' },
-      { id: 'B', text: 'Menyerahkan seluruh urusan moral sekolah kepada kepala sekolah dan penjaga sekolah' },
-      { id: 'C', text: 'Hanya bersikap baik ketika diawasi oleh guru di dalam ruang kelas' },
-      { id: 'D', text: 'Menghafal butir-butir sila tanpa mempraktikkannya dalam pergaulan sehari-hari' },
-    ],
-    correctAnswer: 'A',
-    explanation: `Siswa kelas VI adalah teladan bagi adik-adik kelas. Menjadi pelopor kebaikan dan konsisten menerapkan nilai Pancasila adalah bukti nyata menjadikan Pancasila sebagai pandangan hidup bangsa.`,
+    explanation: `Ubah semua panjang pita ke bentuk desimal dengan dua angka di belakang koma:
+• Pita Made = 0,7 = 0,70 meter
+• Pita Siti = 3/5 = (3 × 2) / (5 × 2) = 6/10 = 0,6 = 0,60 meter
+• Pita Dayu = 0,65 meter
+Bandingkan: 0,70 > 0,65 > 0,60.
+Maka pita yang paling panjang adalah milik Made (0,7 meter).`,
   },
 
   // =========================================================================
-  // BAGIAN 2: PILIHAN GANDA KOMPLEKS (5 BUTIR SOAL: NO. 21 - 25)
+  // BAGIAN 2: PILIHAN GANDA KOMPLEKS (5 BUTIR SOAL: NO. 16 - 20)
   // Kemungkinan memiliki LEBIH DARI SATU jawaban benar.
   // =========================================================================
   {
-    id: 21,
+    id: 16,
     type: 'pgk',
-    topic: 'Tindakan Mengajak Teman Mengamalkan Sila Pertama',
+    topic: 'Nilai Tempat & Angka Desimal',
     difficulty: 'Sedang',
-    text: `Manakah di antara tindakan berikut yang merupakan contoh nyata mengajak teman mengamalkan Sila Pertama Pancasila di sekolah? (Pilihlah DUA jawaban yang benar!)`,
+    text: `Diberikan bilangan desimal 72,508. Manakah pernyataan berikut yang bernilai BENAR? (Pilihlah DUA jawaban yang benar!)`,
     options: [
-      { id: 'A', text: 'Mengingatkan teman untuk melaksanakan ibadah sholat atau doa tepat pada waktunya' },
-      { id: 'B', text: 'Mengajak teman menjaga ketenangan saat mendengar warga sekitar sedang beribadah' },
-      { id: 'C', text: 'Memaksa teman memeluk agama yang sama dengan kita agar semakin akrab' },
-      { id: 'D', text: 'Menyembunyikan perlengkapan ibadah milik teman untuk bercanda' },
+      { id: 'A', text: 'Angka 5 menempati nilai tempat persepuluhan dengan nilai 0,5' },
+      { id: 'B', text: 'Angka 8 menempati nilai tempat perseratusan dengan nilai 0,08' },
+      { id: 'C', text: 'Angka 8 menempati nilai tempat perseribuan dengan nilai 0,008' },
+      { id: 'D', text: 'Angka 7 menempati nilai tempat satuan' },
     ],
-    correctAnswer: ['A', 'B'],
-    explanation: `Tindakan A (mengingatkan ibadah tepat waktu) dan B (menjaga ketenangan ibadah) adalah bukti toleransi dan penghormatan hak beragama (Sila ke-1). Memaksa agama (C) dan mengganggu ibadah (D) bertentangan dengan Pancasila.`,
+    correctAnswer: ['A', 'C'],
+    explanation: `Pada 72,508:
+• Angka 7 = puluhan (70)
+• Angka 2 = satuan (2)
+• Angka 5 = persepuluhan (0,5) -> Pernyataan A BENAR
+• Angka 0 = perseratusan (0,00)
+• Angka 8 = perseribuan (0,008) -> Pernyataan C BENAR
+Pernyataan B salah karena 8 di perseribuan, dan D salah karena 7 adalah puluhan.`,
+  },
+  {
+    id: 17,
+    type: 'pgk',
+    topic: 'Mengubah Pecahan menjadi Desimal',
+    difficulty: 'Sedang',
+    text: `Manakah pasangan pecahan biasa dan bentuk desimalnya berikut yang bernilai TEPAT? (Pilihlah TIGA jawaban yang benar!)`,
+    options: [
+      { id: 'A', text: '1/2 = 0,5' },
+      { id: 'B', text: '4/5 = 0,8' },
+      { id: 'C', text: '1/4 = 0,25' },
+      { id: 'D', text: '3/8 = 0,38' },
+    ],
+    correctAnswer: ['A', 'B', 'C'],
+    explanation: `Evaluasi:
+• A: 1/2 = 5/10 = 0,5 (BENAR)
+• B: 4/5 = 8/10 = 0,8 (BENAR)
+• C: 1/4 = 25/100 = 0,25 (BENAR)
+• D: 3/8 = 375/1000 = 0,375 bukan 0,38 (SALAH)
+Maka jawaban yang benar adalah A, B, dan C.`,
+  },
+  {
+    id: 18,
+    type: 'pgk',
+    topic: 'Mengubah Desimal menjadi Pecahan Biasa',
+    difficulty: 'Sedang',
+    text: `Pilihlah DUA bilangan desimal berikut yang jika diubah ke dalam bentuk pecahan biasa paling sederhana menghasilkan pecahan dengan penyebut 4!`,
+    options: [
+      { id: 'A', text: '0,25' },
+      { id: 'B', text: '0,5' },
+      { id: 'C', text: '0,75' },
+      { id: 'D', text: '0,8' },
+    ],
+    correctAnswer: ['A', 'C'],
+    explanation: `Mari sederhanakan masing-masing:
+• A: 0,25 = 25/100 = 1/4 (Penyebut 4 -> BENAR)
+• B: 0,5 = 5/10 = 1/2 (Penyebut 2)
+• C: 0,75 = 75/100 = 3/4 (Penyebut 4 -> BENAR)
+• D: 0,8 = 8/10 = 4/5 (Penyebut 5)
+Maka pilihan yang benar adalah A dan C.`,
+  },
+  {
+    id: 19,
+    type: 'pgk',
+    topic: 'Membandingkan Bilangan Desimal',
+    difficulty: 'Sedang',
+    text: `Manakah di antara bilangan-bilangan desimal berikut yang bernilai LEBIH BESAR daripada 0,65? (Pilihlah DUA jawaban yang benar!)`,
+    options: [
+      { id: 'A', text: '0,7' },
+      { id: 'B', text: '0,605' },
+      { id: 'C', text: '0,68' },
+      { id: 'D', text: '0,599' },
+    ],
+    correctAnswer: ['A', 'C'],
+    explanation: `Bandingkan dengan menyamakan 3 angka di belakang koma (0,65 = 0,650):
+• A: 0,7 = 0,700 (0,700 > 0,650 -> LEBIH BESAR)
+• B: 0,605 (0,605 < 0,650 -> lebih kecil)
+• C: 0,68 = 0,680 (0,680 > 0,650 -> LEBIH BESAR)
+• D: 0,599 (0,599 < 0,650 -> lebih kecil)
+Maka jawabannya adalah A dan C.`,
+  },
+  {
+    id: 20,
+    type: 'pgk',
+    topic: 'Bilangan Desimal di Antara Dua Bilangan',
+    difficulty: 'Sukar',
+    text: `Manakah bilangan-bilangan desimal berikut yang terletak DI ANTARA 0,3 dan 0,4? (Pilihlah DUA jawaban yang benar!)`,
+    options: [
+      { id: 'A', text: '0,35' },
+      { id: 'B', text: '0,29' },
+      { id: 'C', text: '0,385' },
+      { id: 'D', text: '0,42' },
+    ],
+    correctAnswer: ['A', 'C'],
+    explanation: `0,3 = 0,300 dan 0,4 = 0,400.
+Bilangan yang berada di antara 0,300 dan 0,400 adalah:
+• A: 0,35 = 0,350 (0,300 < 0,350 < 0,400 -> BENAR)
+• B: 0,29 = 0,290 (di luar rentang, lebih kecil dari 0,300)
+• C: 0,385 (0,300 < 0,385 < 0,400 -> BENAR)
+• D: 0,42 = 0,420 (di luar rentang, lebih besar dari 0,400)
+Jadi pilihan yang benar adalah A dan C.`,
+  },
+
+  // =========================================================================
+  // BAGIAN 3: PILIHAN GANDA KOMPLEKS KATEGORI (5 BUTIR SOAL: NO. 21 - 25)
+  // Menilai pernyataan matematis: Benar/Salah, Sesuai/Tidak Sesuai, Setuju/Tidak Setuju
+  // =========================================================================
+  {
+    id: 21,
+    type: 'pgk_kategori',
+    categoryType: 'benar_salah',
+    topic: 'Konsep Nilai Tempat Desimal',
+    difficulty: 'Mudah',
+    text: `Tentukan apakah setiap pernyataan mengenai nilai tempat bilangan desimal berikut bernilai BENAR atau SALAH!`,
+    statements: [
+      {
+        id: 's1',
+        text: 'Pada bilangan 12,345 angka pertama di belakang koma (angka 3) menempati nilai tempat persepuluhan.',
+        correctAnswer: true,
+      },
+      {
+        id: 's2',
+        text: 'Angka 0 di sebelah paling kanan setelah tanda koma seperti pada 2,50 mengubah nilai bilangan menjadi 10 kali lebih besar dari 2,5.',
+        correctAnswer: false,
+      },
+      {
+        id: 's3',
+        text: 'Nilai dari tempat perseratusan adalah sepuluh kali lebih kecil daripada nilai tempat persepuluhan.',
+        correctAnswer: true,
+      },
+    ],
+    explanation: `Pernyataan 1 BENAR (angka pertama di kanan koma adalah persepuluhan).
+Pernyataan 2 SALAH (angka 0 paling akhir di belakang koma tidak mengubah nilai, 2,50 = 2,5).
+Pernyataan 3 BENAR (1/100 adalah 1/10 dari 1/10).`,
   },
   {
     id: 22,
-    type: 'pgk',
-    topic: 'Cara Santun Menasihati Teman yang Berbuat Curang',
-    difficulty: 'Sedang',
-    text: `Saat ulangan harian berlangsung, kamu melihat teman sebangkumu membuka contekan kertas kecil. Pilihlah DUA (2) tindakan terpuji yang mencerminkan cara mengingatkan berjiwa Pancasila!`,
-    options: [
-      { id: 'A', text: 'Mengingatkannya dengan berbisik halus agar menghentikan perbuatan tersebut karena tidak jujur' },
-      { id: 'B', text: 'Menasihatinya seusai ulangan bahwa kejujuran dan percaya pada kemampuan diri sendiri jauh lebih berharga daripada nilai contekan' },
-      { id: 'C', text: 'Meminjam contekan tersebut agar mendapat nilai yang sama tingginya' },
-      { id: 'D', text: 'Meneriakinya dengan kata-kata kasar di hadapan seluruh siswa di kelas' },
+    type: 'pgk_kategori',
+    categoryType: 'benar_salah',
+    topic: 'Konversi Pecahan ke Desimal',
+    difficulty: 'Mudah',
+    text: `Tentukan apakah hasil konversi pecahan ke desimal berikut bernilai BENAR atau SALAH!`,
+    statements: [
+      {
+        id: 's1',
+        text: 'Pecahan 1/5 sama nilainya dengan bilangan desimal 0,2.',
+        correctAnswer: true,
+      },
+      {
+        id: 's2',
+        text: 'Pecahan 3/20 sama nilainya dengan bilangan desimal 0,32.',
+        correctAnswer: false,
+      },
+      {
+        id: 's3',
+        text: 'Pecahan campuran 1 1/4 sama nilainya dengan bilangan desimal 1,25.',
+        correctAnswer: true,
+      },
     ],
-    correctAnswer: ['A', 'B'],
-    explanation: `Menasihati secara santun saat kejadian (A) dan berdiskusi secara mendalam seusai ulangan (B) menanamkan nilai integritas dan kejujuran (Sila ke-1 dan ke-2) tanpa merendahkan martabat teman.`,
+    explanation: `Pernyataan 1 BENAR (1/5 = 2/10 = 0,2).
+Pernyataan 2 SALAH (3/20 = (3 × 5)/(20 × 5) = 15/100 = 0,15 bukan 0,32).
+Pernyataan 3 BENAR (1 1/4 = 1 + 25/100 = 1,25).`,
   },
   {
     id: 23,
-    type: 'pgk',
-    topic: 'Sikap Teladan Menjaga Persatuan & Kebangsaan',
-    difficulty: 'Sukar',
-    text: `Pilihlah TIGA (3) perilaku siswa yang mencerminkan teladan nyata dalam menjaga persatuan dan mengajak teman mencintai bangsa Indonesia!`,
-    options: [
-      { id: 'A', text: 'Mengajak teman bernyanyi lagu-lagu nasional dan daerah dengan penuh semangat' },
-      { id: 'B', text: 'Bangga memakai seragam batik sekolah dan memuji keindahan motif batik khas nusantara' },
-      { id: 'C', text: 'Mengajak teman berteman akrab dengan semua siswa tanpa membeda-bedakan asal daerah dan warna kulit' },
-      { id: 'D', text: 'Membuat geng khusus yang hanya menerima anak-anak dari kelompok suku tertentu' },
+    type: 'pgk_kategori',
+    categoryType: 'sesuai_tidak_sesuai',
+    topic: 'Penyederhanaan Desimal ke Pecahan',
+    difficulty: 'Sedang',
+    text: `Tentukan apakah perubahan bilangan desimal menjadi pecahan biasa paling sederhana berikut SESUAI atau TIDAK SESUAI!`,
+    statements: [
+      {
+        id: 's1',
+        text: 'Desimal 0,8 jika diubah menjadi pecahan paling sederhana adalah 4/5.',
+        correctAnswer: true,
+      },
+      {
+        id: 's2',
+        text: 'Desimal 0,125 jika diubah menjadi pecahan paling sederhana adalah 1/8.',
+        correctAnswer: true,
+      },
+      {
+        id: 's3',
+        text: 'Desimal 0,36 jika diubah menjadi pecahan paling sederhana adalah 18/25.',
+        correctAnswer: false,
+      },
     ],
-    correctAnswer: ['A', 'B', 'C'],
-    explanation: `Pilihan A (cinta lagu nasional), B (bangga batik nusantara), dan C (inklusif tanpa sekat suku) adalah pilar-pilar penguat Persatuan Indonesia (Sila ke-3). Pilihan D merusak persatuan kelas.`,
+    explanation: `Pernyataan 1 SESUAI: 0,8 = 8/10 = (8:2)/(10:2) = 4/5.
+Pernyataan 2 SESUAI: 0,125 = 125/1000 = (125:125)/(1000:125) = 1/8.
+Pernyataan 3 TIDAK SESUAI: 0,36 = 36/100 = (36:4)/(100:4) = 9/25 bukan 18/25.`,
   },
   {
     id: 24,
-    type: 'pgk',
-    topic: 'Etika Musyawarah Kelas yang Demokratis',
+    type: 'pgk_kategori',
+    categoryType: 'benar_salah',
+    topic: 'Perbandingan Simbol Desimal',
     difficulty: 'Sedang',
-    text: `Dalam kegiatan musyawarah penataan jadwal piket kelas, sikap apa sajakah yang wajib kita terapkan dan kita ajarkan kepada teman? (Pilihlah DUA jawaban yang benar!)`,
-    options: [
-      { id: 'A', text: 'Menghargai pendapat teman lain meskipun berbeda pandangan dengan kita' },
-      { id: 'B', text: 'Memotong pembicaraan teman secara kasar agar usulan kita yang cepat disahkan' },
-      { id: 'C', text: 'Menerima dan melaksanakan hasil kesepakatan musyawarah dengan ikhlas dan penuh rasa tanggung jawab' },
-      { id: 'D', text: 'Mengancam akan mogok sekolah jika usulan pribadi ditolak oleh anggota kelas' },
+    text: `Tentukan apakah pernyataan perbandingan bilangan desimal berikut bernilai BENAR atau SALAH!`,
+    statements: [
+      {
+        id: 's1',
+        text: '0,9 > 0,899',
+        correctAnswer: true,
+      },
+      {
+        id: 's2',
+        text: '3,07 < 3,007',
+        correctAnswer: false,
+      },
+      {
+        id: 's3',
+        text: '5,60 = 5,6',
+        correctAnswer: true,
+      },
     ],
-    correctAnswer: ['A', 'C'],
-    explanation: `Menghargai perbedaan pendapat (A) dan berkomitmen menjalankan hasil mufakat (C) adalah dua asas fundamental dalam Sila Keempat Pancasila.`,
+    explanation: `Pernyataan 1 BENAR (0,9 = 0,900, dan 0,900 > 0,899).
+Pernyataan 2 SALAH (3,07 = 3,070, dan 3,070 > 3,007, tanda yang benar adalah >).
+Pernyataan 3 BENAR (angka nol di ujung desimal tidak mengubah nilainya).`,
   },
   {
     id: 25,
-    type: 'pgk',
-    topic: 'Mengajak Teman Hidup Adil, Hemat, & Peduli Sosial',
-    difficulty: 'Sedang',
-    text: `Manakah di antara tindakan berikut yang sesuai dengan pengamalan Sila Kelima saat bergaul dengan teman? (Pilihlah DUA jawaban yang benar!)`,
-    options: [
-      { id: 'A', text: 'Mengajak teman menabung sebagian uang saku ke celengan kelas untuk dana sosial siswa' },
-      { id: 'B', text: 'Memberikan pujian dan apresiasi tulus atas hasil gambar lukisan pemandangan karya teman' },
-      { id: 'C', text: 'Memamerkan ponsel dan barang mahal untuk membuat teman merasa rendah diri' },
-      { id: 'D', text: 'Meminta teman mengerjakan pekerjaan rumah (PR) kita dengan imbalan upah' },
+    type: 'pgk_kategori',
+    categoryType: 'setuju_tidak_setuju',
+    topic: 'Metode Pengurutan Desimal',
+    difficulty: 'Mudah',
+    text: `Berikan respon SETUJU atau TIDAK SETUJU terhadap cara-cara siswa dalam membandingkan bilangan desimal berikut!`,
+    statements: [
+      {
+        id: 's1',
+        text: 'Menyamakan banyak digit di belakang koma dengan menambahkan angka 0 di paling kanan mempermudah membandingkan nilai desimal.',
+        correctAnswer: true,
+      },
+      {
+        id: 's2',
+        text: 'Bilangan desimal dengan jumlah angka di belakang koma lebih banyak selalu bernilai lebih besar (misal 0,123 selalu lebih besar dari 0,5).',
+        correctAnswer: false,
+      },
+      {
+        id: 's3',
+        text: 'Saat membandingkan desimal, kita harus memeriksa terlebih dahulu bagian bilangan bulatnya sebelum memeriksa angka di belakang koma.',
+        correctAnswer: true,
+      },
     ],
-    correctAnswer: ['A', 'B'],
-    explanation: `Mengajak menabung untuk dana sosial (A) dan menghargai karya cipta orang lain (B) merupakan pengamalan Sila Kelima. Bersikap pamer (C) dan menyuruh teman mengerjakan tugas pribadi (D) bertentangan dengan keadilan sosial.`,
+    explanation: `Pernyataan 1 DISETUJUI (menyamakan digit misal 0,5 menjadi 0,50 membuat perbandingan dengan 0,45 sangat jelas).
+Pernyataan 2 TIDAK DISETUJUI (0,5 = 0,500 yang jauh lebih besar daripada 0,123. Banyaknya digit tidak menentukan besarnya nilai).
+Pernyataan 3 DISETUJUI (bilangan bulat memiliki nilai tempat paling tinggi, misal 2,1 pasti lebih besar dari 1,99).`,
   },
 
   // =========================================================================
-  // BAGIAN 3: PILIHAN GANDA KOMPLEKS KATEGORI (5 BUTIR SOAL: NO. 26 - 30)
-  // Menilai pernyataan kontekstual: Benar/Salah, Setuju/Tidak Setuju, Sesuai/Tidak Sesuai
+  // BAGIAN 4: ISIAN SINGKAT (5 BUTIR SOAL: NO. 26 - 30)
+  // Menjawab dengan angka / pecahan tepat dan padat
   // =========================================================================
   {
     id: 26,
-    type: 'pgk_kategori',
-    categoryType: 'benar_salah',
-    topic: 'Fungsi Pancasila sebagai Pandangan Hidup Bangsa',
+    type: 'isian',
+    topic: 'Nilai Tempat Desimal',
     difficulty: 'Mudah',
-    text: `Tentukan apakah setiap pernyataan mengenai fungsi Pancasila sebagai pandangan hidup bangsa berikut bernilai BENAR atau SALAH!`,
-    statements: [
-      {
-        id: 's1',
-        text: 'Pancasila berfungsi sebagai kompas moral dan pedoman bersikap bagi seluruh rakyat Indonesia.',
-        correctAnswer: true,
-      },
-      {
-        id: 's2',
-        text: 'Pancasila hanya perlu diamalkan saat jam pelajaran di sekolah dan tidak perlu dipraktikkan di rumah atau lingkungan masyarakat.',
-        correctAnswer: false,
-      },
-      {
-        id: 's3',
-        text: 'Mengamalkan Pancasila sebagai pandangan hidup membantu membentengi diri dari pengaruh negatif pergaulan bebas di era modern.',
-        correctAnswer: true,
-      },
+    text: `Pada bilangan desimal 19,458 nama nilai tempat untuk angka 5 adalah...`,
+    correctAnswer: 'Perseratusan',
+    acceptedAnswers: [
+      'perseratusan',
+      'tempat perseratusan',
+      'nilai tempat perseratusan',
+      'seperseratus',
+      'per seratusan',
     ],
-    explanation: `Pernyataan 1 BENAR (Pancasila adalah kompas moral). Pernyataan 2 SALAH (Pancasila harus diamalkan di mana pun kita berada sepanjang hayat). Pernyataan 3 BENAR (Pancasila adalah filter kebudayaan global).`,
+    explanation: `Pada 19,458 angka 4 adalah persepuluhan, angka 5 adalah perseratusan, dan angka 8 adalah perseribuan. Jadi nilai tempat angka 5 adalah perseratusan.`,
   },
   {
     id: 27,
-    type: 'pgk_kategori',
-    categoryType: 'setuju_tidak_setuju',
-    topic: 'Cara Mengingatkan & Menasihati Teman',
+    type: 'isian',
+    topic: 'Mengubah Pecahan menjadi Desimal',
     difficulty: 'Mudah',
-    text: `Berikan respon SETUJU atau TIDAK SETUJU terhadap cara-cara siswa dalam mengingatkan teman berikut ini!`,
-    statements: [
-      {
-        id: 's1',
-        text: 'Mengingatkan teman yang berbuat keliru sebaiknya dilakukan secara empat mata dengan tutur kata yang santun dan bersahabat.',
-        correctAnswer: true,
-      },
-      {
-        id: 's2',
-        text: 'Kita boleh memarahi dan mempermalukan teman di depan umum agar ia merasa kapok dan tidak berbuat salah lagi.',
-        correctAnswer: false,
-      },
-      {
-        id: 's3',
-        text: 'Sebelum mengajak orang lain berbuat baik, kita harus terlebih dahulu memberi teladan melalui perbuatan nyata kita sendiri.',
-        correctAnswer: true,
-      },
-    ],
-    explanation: `Pernyataan 1 patut DISETUJUI (nasihat empat mata menjaga martabat teman). Pernyataan 2 TIDAK DISETUJUI (mempermalukan orang lain melanggar nilai kemanusiaan). Pernyataan 3 patut DISETUJUI (keteladanan nyata adalah kunci keberhasilan mengajak sesama).`,
+    text: `Bentuk bilangan desimal dari pecahan 1/8 adalah... (Gunakan koma sebagai pemisah desimal)`,
+    correctAnswer: '0,125',
+    acceptedAnswers: ['0,125', '0.125', ',125', '.125'],
+    explanation: `1/8 = (1 × 125) / (8 × 125) = 125/1000 = 0,125.`,
   },
   {
     id: 28,
-    type: 'pgk_kategori',
-    categoryType: 'sesuai_tidak_sesuai',
-    topic: 'Penerapan Kemanusiaan & Anti-Perundungan di Sekolah',
+    type: 'isian',
+    topic: 'Mengubah Desimal menjadi Pecahan Paling Sederhana',
     difficulty: 'Sedang',
-    text: `Tentukan apakah perilaku siswa berikut SESUAI atau TIDAK SESUAI dengan nilai Sila Kedua dalam pergaulan di sekolah!`,
-    statements: [
-      {
-        id: 's1',
-        text: 'Menegur teman yang suka mengejek kekurangan fisik teman lain dan mengajak seluruh kelas bersikap ramah.',
-        correctAnswer: true,
-      },
-      {
-        id: 's2',
-        text: 'Mengucilkan teman yang pendiam dan menolak meminjamkan alat tulis saat teman tersebut sangat membutuhkan bantuan.',
-        correctAnswer: false,
-      },
-      {
-        id: 's3',
-        text: 'Menggalang doa bersama dan bantuan sukarela saat ada keluarga teman yang tertimpa musibah duka cita.',
-        correctAnswer: true,
-      },
-    ],
-    explanation: `Perilaku 1 SESUAI (menolak perundungan dan membela kebaikan). Perilaku 2 TIDAK SESUAI (mengucilkan orang lain melanggar hak asasi). Perilaku 3 SESUAI (berempati dan tolong menolong sesama insan).`,
+    text: `Bentuk pecahan biasa paling sederhana dari bilangan desimal 0,16 adalah... (Tuliskan dalam format a/b)`,
+    correctAnswer: '4/25',
+    acceptedAnswers: ['4/25', '4 / 25', '4 per 25'],
+    explanation: `0,16 = 16/100.
+Bagi pembilang dan penyebut dengan FPB(16, 100) yaitu 4:
+(16 : 4) / (100 : 4) = 4/25.`,
   },
   {
     id: 29,
-    type: 'pgk_kategori',
-    categoryType: 'benar_salah',
-    topic: 'Nilai Gotong Royong & Persatuan Siswa',
-    difficulty: 'Mudah',
-    text: `Tentukan apakah setiap pernyataan mengenai semangat gotong royong dan persatuan berikut bernilai BENAR atau SALAH!`,
-    statements: [
-      {
-        id: 's1',
-        text: 'Semangat gotong royong membuat tugas piket kelas yang berat menjadi terasa lebih ringan dan cepat selesai.',
-        correctAnswer: true,
-      },
-      {
-        id: 's2',
-        text: 'Mengajak teman bekerja sama dalam gotong royong hanya boleh ditujukan kepada teman yang seagama saja.',
-        correctAnswer: false,
-      },
-      {
-        id: 's3',
-        text: 'Bangga menyanyikan lagu kebangsaan Indonesia Raya saat upacara bendera memperkuat rasa cinta tanah air seluruh siswa.',
-        correctAnswer: true,
-      },
-    ],
-    explanation: `Pernyataan 1 BENAR (manfaat utama gotong royong). Pernyataan 2 SALAH (gotong royong bersifat universal dan menyatukan seluruh rakyat tanpa sekat). Pernyataan 3 BENAR (khidmat upacara menumbuhkan nasionalisme).`,
+    type: 'isian',
+    topic: 'Mengubah Pecahan Campuran menjadi Desimal',
+    difficulty: 'Sedang',
+    text: `Bentuk desimal dari pecahan campuran 4 1/2 adalah...`,
+    correctAnswer: '4,5',
+    acceptedAnswers: ['4,5', '4.5', '4,50', '4.50'],
+    explanation: `1/2 = 0,5.
+Maka 4 1/2 = 4 + 0,5 = 4,5.`,
   },
   {
     id: 30,
-    type: 'pgk_kategori',
-    categoryType: 'setuju_tidak_setuju',
-    topic: 'Sikap dalam Mengajak Musyawarah & Toleransi',
-    difficulty: 'Mudah',
-    text: `Berikan respon SETUJU atau TIDAK SETUJU terhadap sikap siswa dalam kehidupan berdemokrasi dan bertoleransi di sekolah berikut!`,
-    statements: [
-      {
-        id: 's1',
-        text: 'Mengajak teman-teman duduk bersama dan mendengarkan semua masukan sebelum mengambil keputusan kegiatan kelas.',
-        correctAnswer: true,
-      },
-      {
-        id: 's2',
-        text: 'Memaksakan kehendak dan marah-marah apabila usulan pribadi tidak disetujui dalam rapat musyawarah kelas.',
-        correctAnswer: false,
-      },
-      {
-        id: 's3',
-        text: 'Mengajak teman menjaga ketenangan saat mendengar suara adzan atau lonceng doa persembahyangan berkumandang.',
-        correctAnswer: true,
-      },
-    ],
-    explanation: `Pernyataan 1 patut DISETUJUI (demokratis dan menghargai masukan). Pernyataan 2 TIDAK DISETUJUI (memaksakan kehendak melanggar Sila Keempat). Pernyataan 3 patut DISETUJUI (menghormati ritual ibadah adalah esensi Sila Pertama).`,
-  },
-
-  // =========================================================================
-  // BAGIAN 4: ISIAN SINGKAT (5 BUTIR SOAL: NO. 31 - 35)
-  // Menjawab dengan kata kunci tepat dan padat
-  // =========================================================================
-  {
-    id: 31,
     type: 'isian',
-    topic: 'Istilah Asing Pandangan Hidup Bangsa',
+    topic: 'Membandingkan Bilangan Desimal',
     difficulty: 'Mudah',
-    text: `Istilah dalam bahasa Inggris untuk Pancasila sebagai pedoman tingkah laku dan arah hidup bangsa sehari-hari adalah...`,
-    correctAnswer: 'Way of Life',
-    acceptedAnswers: ['way of life', 'the way of life', 'way of life bangsa', 'weltanschauung'],
-    explanation: `Pancasila sebagai pandangan hidup bangsa sering diistilahkan dalam bahasa Inggris sebagai "Way of Life", yang berarti jalan atau pedoman hidup dalam bertingkah laku.`,
-  },
-  {
-    id: 32,
-    type: 'isian',
-    topic: 'Semboyan Pemersatu Bangsa',
-    difficulty: 'Mudah',
-    text: `Semboyan nasional yang kita pegang teguh saat mengajak teman yang berbeda suku dan agama untuk selalu hidup rukun dan bersatu adalah...`,
-    correctAnswer: 'Bhinneka Tunggal Ika',
-    acceptedAnswers: ['bhinneka tunggal ika', 'bhineka tunggal ika'],
-    explanation: `Semboyan "Bhinneka Tunggal Ika" (Berbeda-beda tetapi tetap satu jua) menjadi pedoman utama persatuan dan kerukunan keberagaman bangsa Indonesia.`,
-  },
-  {
-    id: 33,
-    type: 'isian',
-    topic: 'Prinsip Keteladanan Ki Hajar Dewantara',
-    difficulty: 'Sedang',
-    text: `Prinsip keteladanan yang diajarkan Ki Hajar Dewantara di mana kita harus memberikan contoh perbuatan baik terlebih dahulu di depan sebelum mengajak teman disebut...`,
-    correctAnswer: 'Ing Ngarso Sung Tulodo',
-    acceptedAnswers: [
-      'ing ngarso sung tulodo',
-      'ing ngarsa sung tulada',
-      'ing ngarso sung tulada',
-      'teladan',
-      'memberi teladan',
-    ],
-    explanation: `"Ing Ngarso Sung Tulodo" bermakna di depan memberi teladan, yakni cara terbaik mengajak teman berbuat baik adalah dengan mencontohkannya terlebih dahulu secara nyata.`,
-  },
-  {
-    id: 34,
-    type: 'isian',
-    topic: 'Keputusan Musyawarah Mufakat',
-    difficulty: 'Mudah',
-    text: `Kesepakatan bulat yang dicapai secara bersama-sama dalam musyawarah kelas untuk memecahkan persoalan disebut dengan...`,
-    correctAnswer: 'Mufakat',
-    acceptedAnswers: ['mufakat', 'musyawarah mufakat', 'sepakat', 'kesepakatan bulat'],
-    explanation: `Mufakat adalah hasil kesepakatan bersama yang disetujui oleh seluruh peserta musyawarah dengan hati ikhlas demi kepentingan bersama (Sila ke-4).`,
-  },
-  {
-    id: 35,
-    type: 'isian',
-    topic: 'Sikap Santun Mengingatkan Teman',
-    difficulty: 'Mudah',
-    text: `Agar teman yang melakukan kesalahan tidak merasa malu atau sakit hati, kita sebaiknya mengingatkannya dengan tutur kata yang ramah dan...`,
-    correctAnswer: 'Santun',
-    acceptedAnswers: [
-      'santun',
-      'sopan',
-      'sopan dan santun',
-      'empat mata',
-      'ramah',
-      'baik',
-      'bijaksana',
-    ],
-    explanation: `Menasihati teman harus dilakukan secara santun, sopan, dan hangat agar nasihat tersebut dapat diterima dengan baik tanpa menimbulkan pertengkaran.`,
+    text: `Tuliskan tanda perbandingan yang tepat (pilih salah satu: > atau < atau =) untuk mengisi titik-titik berikut:
+0,8 ... 0,78`,
+    correctAnswer: '>',
+    acceptedAnswers: ['>', 'lebih besar', 'lebih dari', '> (lebih besar)'],
+    explanation: `Samakan digit: 0,8 = 0,80.
+Karena 0,80 > 0,78, maka tanda yang tepat adalah > (lebih besar).`,
   },
 ];

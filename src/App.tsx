@@ -1,8 +1,8 @@
 /**
  * Aplikasi Website Tes Sumatif
  * SD NEGERI 3 LOLOAN TIMUR - JEMBRANA - KELAS VI
- * Mata Pelajaran: PENDIDIKAN PANCASILA
- * Materi: NILAI-NILAI PANCASILA
+ * Mata Pelajaran: MATEMATIKA
+ * Materi: BILANGAN DESIMAL
  */
 
 import React, { useState, useEffect } from 'react';
@@ -17,7 +17,7 @@ import { Stage4TeacherPanel } from './components/Stage4TeacherPanel';
 import { TeacherAuthModal } from './components/TeacherAuthModal';
 import { MateriModal } from './components/MateriModal';
 
-const STORAGE_QUESTIONS_KEY = 'sd3_loloan_timur_questions_pancasila_v3';
+const STORAGE_QUESTIONS_KEY = 'sd3_loloan_timur_questions_matematika_desimal_v1';
 const STORAGE_ALLOW_REVIEW_KEY = 'sd3_loloan_timur_allow_review';
 
 export default function App() {
@@ -37,7 +37,7 @@ export default function App() {
       const saved = localStorage.getItem(STORAGE_QUESTIONS_KEY);
       if (saved) {
         const parsed = JSON.parse(saved);
-        // Pastikan jumlah dan struktur sesuai dengan distribusi 35 butir soal (20 PG, 5 PGK, 5 PGK Kategori, 5 Isian)
+        // Pastikan jumlah dan struktur sesuai dengan distribusi 30 butir soal (15 PG, 5 PGK, 5 PGK Kategori, 5 Isian)
         if (Array.isArray(parsed) && parsed.length === INITIAL_QUESTIONS.length) {
           return parsed;
         }

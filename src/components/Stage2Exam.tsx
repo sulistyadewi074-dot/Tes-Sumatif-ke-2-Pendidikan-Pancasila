@@ -432,7 +432,7 @@ export const Stage2Exam: React.FC<Stage2ExamProps> = ({
                     dangerouslySetInnerHTML={{ __html: currentQ.imageSvg }}
                   />
                   <span className="text-[11px] text-slate-500 mt-2 font-medium">
-                    Ilustrasi Lambang Pancasila
+                    Ilustrasi / Gambar Soal
                   </span>
                 </div>
               )}

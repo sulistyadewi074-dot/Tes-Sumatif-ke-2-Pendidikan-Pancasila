@@ -135,7 +135,7 @@ export function downloadStudentResultPDF(result: ExamResult): void {
   y += 8;
 
   // Baris-baris tabel
-  const totalQuestionsCount = (result.benar || 0) + (result.salah || 0) > 0 ? (result.benar || 0) + (result.salah || 0) : 35;
+  const totalQuestionsCount = (result.benar || 0) + (result.salah || 0) > 0 ? (result.benar || 0) + (result.salah || 0) : 30;
   const tableRows = [
     { label: 'Jumlah Soal Keseluruhan', value: `${totalQuestionsCount} Butir Soal` },
     { label: 'Jumlah Jawaban Benar', value: `${result.benar} Soal` },
@@ -193,8 +193,8 @@ export function downloadStudentResultPDF(result: ExamResult): void {
   doc.setFontSize(8.5);
   const feedbackText =
     result.status === 'Lulus' || result.nilai >= CONFIG.KKTP
-      ? 'Selamat! Peserta didik telah menguasai kompetensi Nilai-nilai Pancasila dengan sangat baik dan memenuhi standar KKTP.'
-      : 'Perlu penguatan materi pemahaman dan pengamalan Nilai-nilai Pancasila serta bimbingan remedial.';
+      ? 'Selamat! Peserta didik telah menguasai kompetensi Bilangan Desimal dengan sangat baik dan memenuhi standar KKTP.'
+      : 'Perlu penguatan materi pemahaman dan perhitungan Bilangan Desimal serta bimbingan remedial.';
   doc.text(feedbackText, 18, y + 6);
   y += 24;
 
@@ -223,7 +223,7 @@ export function downloadStudentResultPDF(result: ExamResult): void {
 
   // Unduh dokumen PDF
   const cleanName = result.nama.replace(/[^a-zA-Z0-9]/g, '_');
-  doc.save(`Hasil_Tes_Pendidikan_Pancasila_${cleanName}_Absen_${result.noAbsen}.pdf`);
+  doc.save(`Hasil_Tes_Matematika_${cleanName}_Absen_${result.noAbsen}.pdf`);
 }
 
 /**
@@ -501,11 +501,11 @@ export function downloadResultsRecapPDF(results: ExamResult[]): void {
     y += 7;
   });
 
-  doc.save(`Rekap_Nilai_Tes_Pendidikan_Pancasila_Kelas_${CONFIG.KELAS}.pdf`);
+  doc.save(`Rekap_Nilai_Tes_Matematika_Kelas_${CONFIG.KELAS}.pdf`);
 }
 
 /**
- * 5. Download Modul & Ringkasan Materi Pembelajaran Pancasila (PDF)
+ * 5. Download Modul & Ringkasan Materi Pembelajaran Matematika (PDF)
  */
 export function downloadMateriPembelajaranPDF(): void {
   const doc = new jsPDF({
@@ -549,14 +549,14 @@ export function downloadMateriPembelajaranPDF(): void {
   // Judul Modul
   doc.setFont('helvetica', 'bold');
   doc.setFontSize(12);
-  doc.text('RINGKASAN MATERI PEMBELAJARAN PENDIDIKAN PANCASILA', pageWidth / 2, y, { align: 'center' });
+  doc.text('RINGKASAN MATERI PEMBELAJARAN MATEMATIKA', pageWidth / 2, y, { align: 'center' });
   y += 5;
   doc.setFontSize(10);
   doc.setTextColor(30, 58, 138);
-  doc.text(`TEMA: MENGAMALKAN PANCASILA SEBAGAI PANDANGAN HIDUP BANGSA`, pageWidth / 2, y, { align: 'center' });
+  doc.text(`POKOK BAHASAN: BILANGAN DESIMAL KELAS ${CONFIG.KELAS}`, pageWidth / 2, y, { align: 'center' });
   y += 4.5;
-  doc.setFontSize(9);
-  doc.text(`SUBTEMA: MENGAJAK TEMAN MENGAMALKAN NILAI-NILAI PANCASILA • KELAS ${CONFIG.KELAS}`, pageWidth / 2, y, { align: 'center' });
+  doc.setFontSize(8.5);
+  doc.text(`NILAI TEMPAT • MENGUBAH PECAHAN ↔ DESIMAL • MEMBANDINGKAN & MENGURUTKAN`, pageWidth / 2, y, { align: 'center' });
   doc.setTextColor(0, 0, 0);
   y += 7;
 
@@ -567,7 +567,7 @@ export function downloadMateriPembelajaranPDF(): void {
   doc.setFont('helvetica', 'normal');
   doc.setFontSize(8.5);
   const introLines = doc.splitTextToSize(
-    'Pancasila sebagai Pandangan Hidup Bangsa (Way of Life) menjadi petunjuk arah moral dan pedoman perilaku sehari-hari. Sebagai insan Pancasila, setiap siswa tidak hanya wajib mengamalkan untuk diri sendiri, tetapi juga aktif mengajak sesama teman mengamalkannya dengan teladan nyata dan komunikasi santun.',
+    'Bilangan desimal merupakan bentuk pecahan persepuluhan, perseratusan, atau perseribuan yang dipisahkan dengan tanda koma (,). Kuasai 4 konsep utama: nilai tempat, mengubah pecahan menjadi desimal, mengubah desimal menjadi pecahan biasa paling sederhana, serta membandingkan dan mengurutkan desimal.',
     pageWidth - 36
   );
   doc.text(introLines, 18, y + 5);
@@ -575,41 +575,44 @@ export function downloadMateriPembelajaranPDF(): void {
 
   const sections = [
     {
-      title: 'A. Makna Pancasila sebagai Pandangan Hidup Bangsa',
+      title: 'A. Nilai Tempat Bilangan Desimal',
       points: [
-        '1. Kompas Moral: Penuntun dalam membedakan perbuatan baik dan tercela.',
-        '2. Perekat Persatuan: Menyatukan ratusan suku dan agama dalam keharmonisan Bhinneka Tunggal Ika.',
-        '3. Penyaring Globalisasi: Membentengi diri dari pergaulan bebas, individualisme, dan pornografi.',
+        '1. Bagian di sebelah kiri koma: Bagian bilangan bulat (satuan, puluhan, ratusan, dst).',
+        '2. Angka ke-1 di kanan koma: Tempat PERSEPULUHAN (nilai: 1/10 atau 0,1).',
+        '3. Angka ke-2 di kanan koma: Tempat PERSERATUSAN (nilai: 1/100 atau 0,01).',
+        '4. Angka ke-3 di kanan koma: Tempat PERSERIBUAN (nilai: 1/1.000 atau 0,001).',
+        'Contoh: Pada 45,782 -> 4=Puluhan, 5=Satuan, 7=Persepuluhan (0,7), 8=Perseratusan (0,08), 2=Perseribuan (0,002).',
       ],
     },
     {
-      title: 'B. Pengamalan Tiap Sila dalam Kehidupan Sehari-hari',
+      title: 'B. Mengubah Pecahan Biasa & Campuran menjadi Desimal',
       points: [
-        'Sila 1 (Bintang Emas): Taat beribadah, toleran, dan tidak mengganggu teman yang sedang sholat/sembahyang.',
-        'Sila 2 (Rantai Emas): Menjunjung tinggi kesetaraan derajat, empati, tolong-menolong, dan tolak perundungan (stop bullying).',
-        'Sila 3 (Pohon Beringin): Cinta tanah air, bangga bahasa Indonesia & produk lokal, serta gotong royong.',
-        'Sila 4 (Kepala Banteng): Mengutamakan musyawarah mufakat, menghargai pendapat, dan tidak memaksakan kehendak.',
-        'Sila 5 (Padi dan Kapas): Keseimbangan hak dan kewajiban, gemar menabung, hidup hemat, dan menghargai karya teman.',
+        '1. Metode Pengali: Ubah penyebut menjadi 10, 100, atau 1.000 (2x5=10, 4x25=100, 5x20=100, 8x125=1.000, 20x5=100).',
+        '• 1/2 = 5/10 = 0,5  |  1/4 = 25/100 = 0,25  |  3/4 = 75/100 = 0,75',
+        '• 1/5 = 2/10 = 0,2  |  2/5 = 4/10 = 0,4   |  3/5 = 6/10 = 0,6   |  4/5 = 8/10 = 0,8',
+        '• 1/8 = 125/1000 = 0,125  |  3/8 = 375/1000 = 0,375  |  5/8 = 625/1000 = 0,625',
+        '2. Pecahan Campuran: 2 3/5 -> simpan 2, ubah 3/5 = 0,6 -> hasil = 2 + 0,6 = 2,6.',
       ],
     },
     {
-      title: 'C. 5 Strategi Efektif Mengajak Teman Mengamalkan Pancasila',
+      title: 'C. Mengubah Desimal menjadi Pecahan Paling Sederhana',
       points: [
-        '1. Memberi Teladan Terlebih Dahulu (Ing Ngarso Sung Tulodo): Teman tergerak saat melihat perbuatan baik kita.',
-        '2. Mengajak dengan Bahasa Ramah & Santun: Hindari nada memerintah atau sok tahu di hadapan teman.',
-        '3. Menasihati Secara Pribadi (Empat Mata): Jangan mempermalukan teman saat ia melakukan kesalahan.',
-        '4. Melibatkan dalam Aksi Nyata Kolaboratif: Piket kelas bersama, donasi peduli bencana, dan kelompok belajar rukun.',
-        '5. Membangun Budaya Apresiasi: Memberi pujian tulus saat teman berbuat jujur dan bertanggung jawab.',
+        '1. Tentukan penyebut dari banyak angka di belakang koma (1 angka = /10, 2 angka = /100, 3 angka = /1000).',
+        '2. Sederhanakan dengan membagi pembilang dan penyebut menggunakan FPB-nya.',
+        '• 0,6 = 6/10 (bagi 2) = 3/5',
+        '• 0,45 = 45/100 (bagi 5) = 9/20',
+        '• 0,125 = 125/1000 (bagi 125) = 1/8',
+        '• 3,75 = 3 + 75/100 = 3 3/4.',
       ],
     },
     {
-      title: 'D. Contoh Kalimat Ajakan Positif Berjiwa Pancasila',
+      title: 'D. Membandingkan & Mengurutkan Bilangan Desimal',
       points: [
-        '- "Sudah jam istirahat nih, yuk kita tunaikan ibadah dulu baru lanjut bermain!" (Sila 1)',
-        '- "Teman-teman, jangan mengejek julukan itu ya, kita semua bersaudara dan sederajat." (Sila 2)',
-        '- "Ayo kita buat kelompok piket campuran biar kelas kita bersih dan kita makin kompak!" (Sila 3)',
-        '- "Daripada kita bertengkar, bagaimana kalau kita musyawarahkan bersama lewat voting?" (Sila 4)',
-        '- "Uang jajan kita masih ada sisa, yuk kita masukkan ke celengan tabungan daripada boros!" (Sila 5)',
+        '1. Bandingkan bagian bilangan bulat di depan koma terlebih dahulu.',
+        '2. Jika bilangan bulat sama, samakan jumlah digit di belakang koma dengan menambahkan angka 0 di ujung kanan.',
+        '• Contoh: Bandingkan 0,7 dan 0,65 -> ubah 0,7 menjadi 0,70 -> 0,70 > 0,65, maka 0,7 > 0,65!',
+        '• Contoh: Bandingkan 0,75 dan 0,705 -> ubah 0,75 menjadi 0,750 -> 0,750 > 0,705, maka 0,75 > 0,705!',
+        '3. Mengurutkan: Samakan semua bilangan ke digit yang sama, lalu urutkan dari terkecil / terbesar.',
       ],
     },
   ];
@@ -653,6 +656,6 @@ export function downloadMateriPembelajaranPDF(): void {
   doc.setFontSize(8);
   doc.text(`${CONFIG.LABEL_NIP_GURU}. ${CONFIG.NIP_GURU}`, rightSignX, y, { align: 'center' });
 
-  doc.save(`Ringkasan_Materi_Pancasila_Kelas_${CONFIG.KELAS}_${CONFIG.SEKOLAH.replace(/[^a-zA-Z0-9]/g, '_')}.pdf`);
+  doc.save(`Ringkasan_Materi_Matematika_Desimal_Kelas_${CONFIG.KELAS}.pdf`);
 }
 
